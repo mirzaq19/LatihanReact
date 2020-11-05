@@ -1,19 +1,23 @@
-import { React, useState } from 'react';
-import {Text, View} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {View, Text, Button} from 'react-native';
 
 export const Mahasiswa = (props) =>{
-  const [counter, setCounter] = useState(0)
+  const [hitung, pengatur] = useState(0)
   
   function updateCounter() {
-    setCounter(counter + 1);
+    pengatur(hitung + 1);
+  }
+  function resetCounter(){
+    pengatur(0);
   }
 
   return(
     <View>
       <Text>Halo nama saya, {props.name} !</Text>
       <Text>dan nrp saya = {props.nrp}</Text>
-      <Text>klik : {counter}</Text>
+      <Text>klik : {hitung}</Text>
       <Button onPress={() => {updateCounter()}} title="Click Me"></Button>
+      <Button onPress={() => {resetCounter()}} title="Reset Counter"></Button>
     </View>
   );
 }
