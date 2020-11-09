@@ -16,6 +16,10 @@ class PageTwo extends React.Component {
           onPress={() => navigation.navigate("BottomBarContainer")} />
         <View style={{ marginVertical: 8 }}></View>
         <Button
+          title={"Ke Page Teknologi"}
+          onPress={() => navigation.navigate("PageTech")} />
+        <View style={{ marginVertical: 8 }}></View>
+        <Button
           title={"Ke Page One"}
           onPress={() => navigation.goBack()} />
       </View>
